@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.ant-menu-item-selected{
+    background-color: #AD49E1 !important;
+}
+.ant-input-outlined {
+    background-color: #EBD3F8 !important;
+}
+
+.ant-input-search-button{
+    background-color: #AD49E1;
+    color: white;
+}
