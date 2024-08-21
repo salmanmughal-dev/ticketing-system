@@ -42,7 +42,8 @@ export function Grid({
       <Layout className="h-[100vh]">
         <SideBar selectedKey="1" />
         <Layout className="bg-secondary">
-          <Header className="bg-primary text-textColor text-3xl border-e-8">
+          <Header className="bg-primary text-textColor text-3xl border-e-8 flex items-center justify-around">
+            <p>QUASAR</p>
             <Search
               className="w-1/4 m-3"
               placeholder="Search tickets"
@@ -50,7 +51,6 @@ export function Grid({
               size="large"
               onSearch={() => console.log("Nothing....")}
             />
-
             <Avatar
               className="float-right m-2 w-[60px] h-[60px] border-2 border-textColor"
               icon={
