@@ -14,6 +14,7 @@ Features
         Assign tickets to users.
         Filter and search tickets.
         Track ticket status and history.
+        Role based ticket assignment [feature for next iteration]
     Dashboard:
         Overview of ticket metrics (e.g., open, closed, assigned).
         Customizable reports and analytics.
@@ -21,3 +22,8 @@ Features
         User authentication and authorization.
         Role-based access control.
         User profiles and preferences.
+
+    
+
+![image](https://github.com/user-attachments/assets/8525b473-a00b-4c7f-9f47-a2768e8b9f80)
+
