@@ -11,14 +11,23 @@ const createIssueSchema = z.object({
     status: z.enum(VALUES).optional()
 })
 
+export async function GET(request: NextRequest) {
+    const issues = await prisma.issue.findMany();
+
+    return NextResponse.json(issues, { status: 200 });
+
+}
+
 export async function POST(request: NextRequest) {
     const body = await request.json();
     const isValid = createIssueSchema.safeParse(body);
     if (!isValid.success)
         return NextResponse.json(isValid.error.errors, {status: 404})
 
+
     const issueEntry = await prisma.issue.create({
-        data: {title: body.title, description: body.description, projectId: body.projectId}
+        
+        data: { title: body.title, description: body.description, projectId: body.projectId, status: body.status ? body.status : 'OPEN'}
     })
 
     return NextResponse.json(issueEntry, { status: 201 });
