@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Grid } from "./_components/Grid";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
 import Home from "./page";
@@ -18,11 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-[100vh]">
-        <Suspense fallback={<p>loading.....</p>}>
-          <Grid components={<Home />} />
-        </Suspense>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
